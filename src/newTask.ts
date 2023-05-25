@@ -8,11 +8,11 @@ function clearText(el: HTMLInputElement): void {
   el.value = "";
 }
 
-export default function newTask(event: Event): void {
+export default function newTask(event: SubmitEvent): void {
   event?.preventDefault();
   const taskText = document.querySelector<HTMLInputElement>("#task-text");
 
-  if (containerList && taskText && taskText.value) {
+  if (containerList && taskText && taskText.value.trim() !== "") {
     containerList.innerHTML += `
     <div class="task-box" id="task-${containerList.childElementCount}">
       <input type="checkbox" class="btn-check"/>
@@ -27,9 +27,9 @@ export default function newTask(event: Event): void {
         localStorage.setItem(`task-${index}`, task.outerHTML);
       }
     });
+    notificationTask("Você adicionou uma nova tarefa.");
   }
 
-  notificationTask("Você adicionou uma nova tarefa.");
   checkBox();
   closeTask();
 

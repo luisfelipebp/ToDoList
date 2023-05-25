@@ -7,6 +7,6 @@ saveLocalStorage();
 closeTask();
 checkBox();
 
-const formTask = document.querySelector(".new-task");
+const formTask = document.querySelector<HTMLFormElement>(".new-task");
 
 formTask?.addEventListener("submit", newTask);
