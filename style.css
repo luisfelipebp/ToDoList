@@ -1,0 +1,121 @@
+/* style.css */
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Main styles */
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form styles */
+.new-task {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.new-task label {
+  display: none;
+}
+
+.new-task input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.new-task button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.new-task button:hover {
+  background-color: #45a049;
+}
+
+.task-box {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: space-between;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.marked {
+  background-color: #4caf50;
+  opacity: 0.7;
+}
+.marked p {
+  text-decoration: line-through;
+}
+
+.btn-close {
+  background-color: #ff4444;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.btn-close:hover {
+  background-color: #ff0000;
+}
+
+.notification {
+  position: absolute;
+  background: #4caf50;
+  padding: 15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: fadeIn 1s;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
